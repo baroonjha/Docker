@@ -1,0 +1,17 @@
+services:
+    postsgress_ka_container: 
+      image: postgres
+      ports:
+        - '5432:5432'
+      environment:
+        POSTGRESS_USER: postgres
+        POSTGRES_DB: review
+        POSTGRES_PASSWORD: password
+    redis_ka_container:
+      image: redis
+      ports:
+        - '6379:6379'
+    nginx_ka_container:
+      image: nginx
+      ports:
+        - '80:80'
